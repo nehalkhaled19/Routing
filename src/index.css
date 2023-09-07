@@ -7,7 +7,163 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --color1: #1abc9c;
+  --color2: #2c3e50;
+  --main-font: 700;
+}
+
+/* Navbar */
+.navbar {
+  transition: all 0.5s;
+}
+
+.navbar,
+footer {
+  background-color: var(--color2) !important;
+  z-index: 22;
+}
+
+.navbar-brand {
+  font-size: 32px;
+  font-weight: var(--main-font)
+}
+
+.active {
+
+  background-color: var(--color1);
+  border-radius: 10px;
+}
+
+.scrolled {
+  padding: 5px 0 !important;
+}
+
+.nav-link {
+  font-weight: var(--main-font);
+  padding: 15px 0;
+}
+
+/* footer */
+footer h3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.icon-holder {
+  width: 40px;
+  height: 40px;
+
+}
+
+.footer2 {
+  background-color: #1a252f;
+}
+
+/* home */
+.layout {
+  background-color: var(--color1);
+  padding-top: 100px;
+  height: 95vh;
+}
+
+.home img {
+  width: 250px;
+  object-fit: contain;
+  position: relative;
+
+}
+
+.layout h2 {
+  font-size: 40px;
+  font-weight: var(--main-font);
+}
+
+.div1 {
+  width: 80px;
+  height: 5px;
+  background-color: white;
+}
+
+/* contact */
+.contact {
+  color: var(--color2);
+}
+
+.contact .div1 {
+  background-color: var(--color2);
+}
+
+.form {
+  width: 55%;
+  color: var(--color1);
+}
+
+.form label {
+  position: relative;
+  bottom: -65px;
+  transition: all 0.3s;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6;
+}
+
+input {
+  z-index: 10;
+}
+
+input:focus {
+  border: 0;
+  box-shadow: 0 0 0 !important;
+}
+
+.btn-contact,
+.btn-contact:hover {
+  background-color: var(--color1) !important;
+  color: white !important;
+}
+
+/* portfolio */
+.layer {
+  background-color: #1abc9ce6;
+  opacity: 0;
+  cursor: pointer;
+  transition: .6s opacity;
+}
+
+.hold:hover .layer {
+  opacity: 1;
+}
+
+.layer i {
+  font-size: 80px;
+}
+
+
+@media (max-width: 767px)  {
+.form{
+  width: 70%;
+}
+.navbar-brand {
+  font-size: 25px;
+  font-weight: var(--main-font)
+}
+}
+@media (max-width: 480px)  {
+  .form{
+    width: 90%;
+  }
+  .navbar-brand {
+    font-size: 18px;
+    font-weight: var(--main-font)
+  }
+  .layout h2 {
+    font-size: 25px;
+  }
+  footer h3 {
+    font-size: 18px;
+  }
+
 }
